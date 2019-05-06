@@ -1,0 +1,53 @@
+@media (max-width: 1024px)
+  .converter
+    padding-bottom: 70px
+
+    .header
+      margin: 0 auto
+      background-repeat: round
+
+      &__title
+        width: auto
+
+        &-text
+          padding-left: 0
+          padding-right: 30px
+
+    .results
+      padding: 0 50px
+      flex-wrap: wrap
+      justify-content: space-evenly
+
+      &__bitcoin
+        margin-top: 50px
+
+      &__ethereum
+        margin-right: 18px
+
+@media (max-width: 736px)
+  .converter
+    display: block !important
+
+    .header
+      background-image: none
+
+      &__title
+        flex-direction: column
+        align-items: center
+        padding: 22px 0
+
+        &-text
+          font-size: 18px
+          line-height: normal
+          padding-right: 0
+          padding-bottom: 30px
+
+    .results
+      display: block
+      padding: 0
+
+      &__ethereum
+        margin-right: 0
+
+      &__litecoin
+        margin-top: 50px

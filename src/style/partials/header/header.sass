@@ -1,0 +1,84 @@
+.header
+  background-color: $background
+  background-image: url("../img/header_background.jpg")
+  padding: 70px 0 52px 0
+  background-repeat: no-repeat
+
+  &__title
+    width: 987px
+    border: 1px solid $header__title-border-color
+    border-radius: 8px
+    padding: 22px
+    background: rgba(255, 255, 255, 0.1)
+    display: flex
+    justify-content: space-between
+
+    &-text
+      font-size: 2em
+      line-height: 1.875
+      font-family: $font-family
+      color: $font-header-color
+      padding-left: 135px
+
+    &-select
+      cursor: pointer
+      font-family: $font-family
+      font-size: 16px
+      font-weight: normal
+      line-height: 3.4
+      position: relative
+      width: 297px
+      color: $font-header-color
+
+      &-current
+        height: 55px
+        background-color: $select-background
+        border-radius: 5px
+        border: solid 1px $select-border-color
+        box-sizing: border-box
+
+        &:after
+          border-bottom: 1px solid #92e8fe
+          border-right: 1px solid #92e8fe
+          content: ''
+          height: 5px
+          position: absolute
+          right: 12px
+          top: 44%
+          transform-origin: 66% 66%
+          transform: rotate(45deg)
+          transition: all 0.15s ease-in-out
+          width: 5px
+
+        &_rotate
+          &:after
+            transform: rotate(-135deg)
+
+        &-text
+          padding-left: 18px
+
+      &-choose-bar
+        width: 297px
+        box-sizing: border-box
+        height: 95px
+        background-color: $select-background
+        border-radius: 5px
+        border: solid 1px $select-border-color
+        position: absolute
+        top: 63px
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        transform: scale(0) translateY(100px)
+        transition: all 0.2s ease-in-out
+
+        &-text
+          line-height: 1
+          height: 100%
+          padding: 8px 0 0 18px
+
+          &:hover
+            background-color: #35434f
+
+        &_show
+          transform: scale(1) translateY(0)

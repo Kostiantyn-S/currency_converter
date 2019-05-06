@@ -1,0 +1,125 @@
+.results
+  display: flex
+  justify-content: space-between
+
+  &__ethereum, &__litecoin, &__bitcoin
+    width: 308px
+    height: 354px
+    border-radius: 8px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+
+  &__ethereum
+    background: url("../img/ethereum_background.png")
+
+  &__litecoin
+    background: url("../img/litecoin_background.png")
+
+  &__bitcoin
+    background: url("../img/bitcoin_background.png")
+
+  &__title
+    font-size: 17px
+    font-family: $font-family
+    color: $font-header-color
+    padding-top: 24px
+    letter-spacing: 1px
+    text-align: center
+    font-weight: 500
+
+  &__data
+    width: 248px
+    padding-bottom: 22px
+    display: flex
+    justify-content: space-between
+    font-weight: 500
+
+    &-titles
+      display: flex
+      flex-direction: column
+      height: 150px
+      justify-content: space-between
+
+      &-price, &-percent, &-hour, &-day, &-week, &-month
+        font-family: $font-family
+        color: $font-header-color
+
+      &-price
+        font-size: 20px
+
+      &-percent, &-hour,&-day, &-week, &-month
+        font-size: 12px
+
+      &-hour, &-day, &-week, &-month
+        color: rgba(255,255,255,0.2)
+
+    &-values
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-end
+      padding-top: 6px
+
+      &-price, &-hour, &-day, &-week, &-month
+        font-family: $font-family
+        color: $font-header-color
+
+      &-price
+        font-size: 16px
+
+      &-hour, &-day, &-week, &-month
+        font-size: 13px
+
+      &-percent
+        padding: 4px 0 12px 0
+
+        & > input[type="checkbox"]
+          display: none
+
+        & > label
+          cursor: pointer
+          position: relative
+          right: 40px
+
+        & > label:before
+          background: #3eb5f1
+          box-shadow: inset 1.362px 2.673px 7px 0 rgba(27, 36, 40, 0.56)
+          border-radius: 8px
+          content: ''
+          height: 16px
+          margin-top: -8px
+          position: absolute
+          transition: all 0.4s ease-in-out
+          width: 42px
+
+        & > label:after
+          border-style: solid
+          border-color: #ffffff
+          border-radius: 50%
+          background-image: url("../img/checkbox.png")
+          content: ''
+          height: 20px
+          left: -4px
+          margin-top: -8px
+          position: absolute
+          top: -4px
+          transition: all 0.3s ease-in-out
+          width: 20px
+
+        & > input[type="checkbox"]:checked + label:before
+          background: #49f15c
+
+        & > input[type="checkbox"]:checked + label:after
+          background-image: url("../img/checkbox.png")
+          left: 20px
+
+    .positive
+      color: #70c446
+
+    .negative
+      color: #c80e24
+
+    .hide
+      display: none
